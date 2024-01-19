@@ -2,9 +2,42 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock, Paper, Scissors</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+
+  <div id="container1" class="container">
+    <div id="player-choice-container" class="choice-container">
+      <div id="player-choice-text-container">
+        <p id="player-choice-text">Player choice:</p>
+      </div>
+      <div id="player-choice-image-container"></div>
+    </div>
+    <div id="image-container">
+      <img id="game-image" src="images/Rock-paper-scissors.svg.png" alt="Rock paper scissors diagram">
+    </div>
+    <div id="computer-choice-container" class="choice-container">
+      <div id="computer-choice-text-container">
+        <p id="computer-choice-text">Computer choice:</p>
+      </div>
+      <div id="computer-choice-image-container"></div>
+    </div>
+  </div>
+  <div id="container2" class="container">
+    <button id="rock-button">Rock</button>
+    <button id="paper-button">Paper</button>
+    <button id="scissors-button">Scissors</button>
+  </div>
+  <div id="container3" class="container">
+    <div id="results-container"></div>
+    <div id="running-score-container"></div> 
+    <div id="endgame-container"></div>
+  </div>
+  <div id="container4" class="container">
+    <div id="reset-container"></div>
+  </div>
   <script src="javascript.js"></script>
 </body>
 </html>
