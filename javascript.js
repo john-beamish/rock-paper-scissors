@@ -1,18 +1,28 @@
 let playerWinCounter = 0;
 let computerWinCounter = 0;
 let playerChoice;
-let rockImage = document.createElement('img');
-rockImage.src = 'images/rock.png';
-rockImage.className = "images";
-let paperImage = document.createElement('img');
-paperImage.src = 'images/paper.png';
-paperImage.className = "images";
-let scissorsImage = document.createElement('img');
-scissorsImage.src = 'images/scissors.png';
-scissorsImage.className = "images";
+let rockImage1 = document.createElement('img');
+rockImage1.src = 'images/rock-1.png';
+rockImage1.className = "images";
+let rockImage2 = document.createElement('img');
+rockImage2.src = 'images/rock-2.png';
+rockImage2.className = "images";
+let paperImage1 = document.createElement('img');
+paperImage1.src = 'images/paper-1.png';
+paperImage1.className = "images";
+let paperImage2 = document.createElement('img');
+paperImage2.src = 'images/paper-2.png';
+paperImage2.className = "images";
+let scissorsImage1 = document.createElement('img');
+scissorsImage1.src = 'images/scissors-1.png';
+scissorsImage1.className = "images";
+let scissorsImage2 = document.createElement('img');
+scissorsImage2.src = 'images/scissors-2.png';
+scissorsImage2.className = "images";
 let transparentImage = document.createElement('img');
 transparentImage.src = 'images/transparent.png';
 transparentImage.className = "images";
+
 
 const container1 = document.querySelector("#container1");
 const container2 = document.querySelector("#container2");
@@ -132,38 +142,38 @@ rockButton.addEventListener('click', () => {
     // Mutating player choice image
     if (playerChoiceImageContainer.childNodes.length === 0) {
         // Container is empty
-        playerChoiceImageContainer.appendChild(rockImage);
+        playerChoiceImageContainer.appendChild(rockImage1);
     } else {
         // Container is not empty
-        playerChoiceImageContainer.replaceChild(rockImage, playerChoiceImageContainer.childNodes[0]);
+        playerChoiceImageContainer.replaceChild(rockImage1, playerChoiceImageContainer.childNodes[0]);
     }
 
     // Mutating computer choice image
     if (myComputerChoice === "rock") {
         if (computerChoiceImageContainer.childNodes.length === 0) {
             // Container is empty
-            computerChoiceImageContainer.appendChild(rockImage);
+            computerChoiceImageContainer.appendChild(rockImage2);
         } else {
             // Container is not empty
-            computerChoiceImageContainer.replaceChild(rockImage, computerChoiceImageContainer.childNodes[0]);
+            computerChoiceImageContainer.replaceChild(rockImage2, computerChoiceImageContainer.childNodes[0]);
         }
     }
     if (myComputerChoice === "paper") {
         if (computerChoiceImageContainer.childNodes.length === 0) {
             // Container is empty
-            computerChoiceImageContainer.appendChild(paperImage);
+            computerChoiceImageContainer.appendChild(paperImage1);
         } else {
             // Container is not empty
-            computerChoiceImageContainer.replaceChild(paperImage, computerChoiceImageContainer.childNodes[0]);
+            computerChoiceImageContainer.replaceChild(paperImage1, computerChoiceImageContainer.childNodes[0]);
         }
     }
     if (myComputerChoice === "scissors") {
         if (computerChoiceImageContainer.childNodes.length === 0) {
             // Container is empty
-            computerChoiceImageContainer.appendChild(scissorsImage);
+            computerChoiceImageContainer.appendChild(scissorsImage1);
         } else {
             // Container is not empty
-            computerChoiceImageContainer.replaceChild(scissorsImage, computerChoiceImageContainer.childNodes[0]);
+            computerChoiceImageContainer.replaceChild(scissorsImage1, computerChoiceImageContainer.childNodes[0]);
         }
     }
 
@@ -182,38 +192,38 @@ paperButton.addEventListener('click', () => {
     // Mutating player choice image
     if (playerChoiceImageContainer.childNodes.length === 0) {
         // Container is empty
-        playerChoiceImageContainer.appendChild(paperImage);
+        playerChoiceImageContainer.appendChild(paperImage1);
     } else {
         // Container is not empty
-        playerChoiceImageContainer.replaceChild(paperImage, playerChoiceImageContainer.childNodes[0]);
+        playerChoiceImageContainer.replaceChild(paperImage1, playerChoiceImageContainer.childNodes[0]);
     }
 
      // Mutating computer choice image
      if (myComputerChoice === "rock") {
         if (computerChoiceImageContainer.childNodes.length === 0) {
             // Container is empty
-            computerChoiceImageContainer.appendChild(rockImage);
+            computerChoiceImageContainer.appendChild(rockImage1);
         } else {
             // Container is not empty
-            computerChoiceImageContainer.replaceChild(rockImage, computerChoiceImageContainer.childNodes[0]);
+            computerChoiceImageContainer.replaceChild(rockImage1, computerChoiceImageContainer.childNodes[0]);
         }
     }
     if (myComputerChoice === "paper") {
         if (computerChoiceImageContainer.childNodes.length === 0) {
             // Container is empty
-            computerChoiceImageContainer.appendChild(paperImage);
+            computerChoiceImageContainer.appendChild(paperImage2);
         } else {
             // Container is not empty
-            computerChoiceImageContainer.replaceChild(paperImage, computerChoiceImageContainer.childNodes[0]);
+            computerChoiceImageContainer.replaceChild(paperImage2, computerChoiceImageContainer.childNodes[0]);
         }
     }
     if (myComputerChoice === "scissors") {
         if (computerChoiceImageContainer.childNodes.length === 0) {
             // Container is empty
-            computerChoiceImageContainer.appendChild(scissorsImage);
+            computerChoiceImageContainer.appendChild(scissorsImage1);
         } else {
             // Container is not empty
-            computerChoiceImageContainer.replaceChild(scissorsImage, computerChoiceImageContainer.childNodes[0]);
+            computerChoiceImageContainer.replaceChild(scissorsImage1, computerChoiceImageContainer.childNodes[0]);
         }
     }
 });
@@ -227,38 +237,38 @@ scissorsButton.addEventListener('click', () => {
     // Mutating player choice image
     if (playerChoiceImageContainer.childNodes.length === 0) {
         // Container is empty
-        playerChoiceImageContainer.appendChild(scissorsImage);
+        playerChoiceImageContainer.appendChild(scissorsImage1);
     } else {
         // Container is not empty
-        playerChoiceImageContainer.replaceChild(scissorsImage, playerChoiceImageContainer.childNodes[0]);
+        playerChoiceImageContainer.replaceChild(scissorsImage1, playerChoiceImageContainer.childNodes[0]);
     }
 
      // Mutating computer choice image
      if (myComputerChoice === "rock") {
         if (computerChoiceImageContainer.childNodes.length === 0) {
             // Container is empty
-            computerChoiceImageContainer.appendChild(rockImage);
+            computerChoiceImageContainer.appendChild(rockImage1);
         } else {
             // Container is not empty
-            computerChoiceImageContainer.replaceChild(rockImage, computerChoiceImageContainer.childNodes[0]);
+            computerChoiceImageContainer.replaceChild(rockImage1, computerChoiceImageContainer.childNodes[0]);
         }
     }
     if (myComputerChoice === "paper") {
         if (computerChoiceImageContainer.childNodes.length === 0) {
             // Container is empty
-            computerChoiceImageContainer.appendChild(paperImage);
+            computerChoiceImageContainer.appendChild(paperImage1);
         } else {
             // Container is not empty
-            computerChoiceImageContainer.replaceChild(paperImage, computerChoiceImageContainer.childNodes[0]);
+            computerChoiceImageContainer.replaceChild(paperImage1, computerChoiceImageContainer.childNodes[0]);
         }
     }
     if (myComputerChoice === "scissors") {
         if (computerChoiceImageContainer.childNodes.length === 0) {
             // Container is empty
-            computerChoiceImageContainer.appendChild(scissorsImage);
+            computerChoiceImageContainer.appendChild(scissorsImage2);
         } else {
             // Container is not empty
-            computerChoiceImageContainer.replaceChild(scissorsImage, computerChoiceImageContainer.childNodes[0]);
+            computerChoiceImageContainer.replaceChild(scissorsImage2, computerChoiceImageContainer.childNodes[0]);
         }
     }
 });
