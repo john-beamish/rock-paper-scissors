@@ -10,32 +10,46 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-
+  color: white;
   background-color: #222021;
   flex: 1; /* Each container takes an equal portion of the available space */
   flex-shrink: 1;
 }
 
-/*#container1 {
-  background-color: #3498db;
+#container1 {
+  justify-content: center;
   
-}*/
+}
 
 #container2 {
   /*background-color: #2ecc71;*/
-  justify-content: space-evenly;
-  padding-top: 32px;
+  justify-content: center;
+  padding-top: 12px;
 }
 
 #container3 {
-  /*background-color: #e74c3c;*/
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
   color: white;
+  flex-direction: row;
+}
+
+#container4 {
+  align-items: flex-start;
+  padding: 0;
+}
+
+#reset-container {
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
 }
 
 #image-container {
   background-color: #E6E6E6;
-  margin-top: 12px;
+  margin-top: 24px;
+  margin-bottom: 24px;
   border-radius: 12px;
 }
 
@@ -59,40 +73,10 @@ html, body {
   padding: 0;
 }
 
-/*#player-choice-container {
- background-color: pink;
-}*/
-
-/*#player-choice-text-container {
-  background-color: red;
-  display: flex;
-}*/
-
-/*#player-choice-image-container {
-  background-color: purple;
-  display: flex;
-}*/
-
-/*#computer-choice-text-container {
-  background-color: yellow;
-  display: flex;
-}*/
-
-/*#computer-choice-image-container {
-  background-color: aqua;
-  display: flex;
-}*/
-
-/*#computer-choice-container {
- background-color: darkgreen;
-}*/
-
 .images {
   max-width: 200px;
   max-height: 200px;
 }
-
-/*buttons*/
 
 button {
   background-color: rgb(159, 32, 197);
@@ -105,12 +89,12 @@ button {
   display: inline-block;
   font-size: 48px;
   font-weight: bolder;
-  margin: 4px;
+  margin: 12px 50px;
   transition-duration: 0.4s;
   cursor: pointer;
   border-radius: 15px;
-  width: 256px;
-  height: 100px;
+  min-width: 300px;
+  min-height: 100px;
 }
 
 #rock-button {
@@ -150,7 +134,7 @@ button {
 }
 
 #reset-container button {
-  background-color: rgb(159, 32, 197);
+  background-color: rgb(162, 24, 204);
   color: white; 
   border: 2px solid white;
   font-size: 36px;
@@ -158,6 +142,65 @@ button {
 
 #reset-container button:hover {
   background-color: white;
-  color: rgb(159, 32, 197);
-  border: 2px solid rgb(159, 32, 197);
+  color: rgb(162, 24, 204);
+  border: 2px solid rgb(162, 24, 204);
 }
+
+#running-score-container {
+
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: space-between;
+  padding: 0px 150px;
+  font-size: 24px;
+  font-weight: bold;
+  height: 100px;
+}
+
+#player-score-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 200px;
+  padding-top: 18px;
+}
+
+#player-score {
+  margin: 0;
+  padding: 0;
+}
+
+#computer-score-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  padding-top: 18px;
+}
+
+#computer-score {
+  margin: 0;
+  padding: 0;
+}
+
+#endgame-container {
+  font-size: 32px;
+}
+
+#results-container {
+  display: flex;
+  align-items: center;
+}
+
+p { margin: 0; }
+
+#results-endgame-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
