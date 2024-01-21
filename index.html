@@ -9,6 +9,20 @@
 <body>
 
   <div id="container1" class="container">
+    <div id="running-score-container">
+      <div id="player-score-container" class="score">
+        <p id="player-score">Player Score</p>
+      </div>
+      <div id="results-endgame-container">
+        <div id="results-container"></div>
+        <div id="endgame-container"></div>
+      </div>
+      <div id="computer-score-container" class="score">
+        <p id="computer-score">Computer Score</p>
+      </div>
+    </div> 
+  </div>
+  <div id="container2" class="container">
     <div id="player-choice-container" class="choice-container">
       <div id="player-choice-text-container">
         <p id="player-choice-text">Player choice:</p>
@@ -24,20 +38,19 @@
       </div>
       <div id="computer-choice-image-container"></div>
     </div>
-  </div>
-  <div id="container2" class="container">
-    <button id="rock-button">Rock</button>
-    <button id="paper-button">Paper</button>
-    <button id="scissors-button">Scissors</button>
+
+
+    
   </div>
   <div id="container3" class="container">
-    <div id="results-container"></div>
-    <div id="running-score-container"></div> 
-    <div id="endgame-container"></div>
-  </div>
-  <div id="container4" class="container">
+    <div id="button-container">
+      <button id="rock-button">Rock</button>
+      <button id="paper-button">Paper</button>
+      <button id="scissors-button">Scissors</button>
+    </div>
     <div id="reset-container"></div>
   </div>
+
   <script src="javascript.js"></script>
 </body>
 </html>
