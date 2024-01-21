@@ -2,22 +2,22 @@ let playerWinCounter = 0;
 let computerWinCounter = 0;
 let playerChoice;
 let rockImage1 = document.createElement('img');
-rockImage1.src = 'images/rock-1.png';
+rockImage1.src = 'images/rock.png';
 rockImage1.className = "images";
 let rockImage2 = document.createElement('img');
-rockImage2.src = 'images/rock-2.png';
+rockImage2.src = 'images/rock.png';
 rockImage2.className = "images";
 let paperImage1 = document.createElement('img');
-paperImage1.src = 'images/paper-1.png';
+paperImage1.src = 'images/paper.png';
 paperImage1.className = "images";
 let paperImage2 = document.createElement('img');
-paperImage2.src = 'images/paper-2.png';
+paperImage2.src = 'images/paper.png';
 paperImage2.className = "images";
 let scissorsImage1 = document.createElement('img');
-scissorsImage1.src = 'images/scissors-1.png';
+scissorsImage1.src = 'images/scissors.png';
 scissorsImage1.className = "images";
 let scissorsImage2 = document.createElement('img');
-scissorsImage2.src = 'images/scissors-2.png';
+scissorsImage2.src = 'images/scissors.png';
 scissorsImage2.className = "images";
 let transparentImage = document.createElement('img');
 transparentImage.src = 'images/transparent.png';
@@ -28,6 +28,7 @@ const container1 = document.querySelector("#container1");
 const container2 = document.querySelector("#container2");
 const container3 = document.querySelector("#container3");
 const container4 = document.querySelector("#container4");
+const container5 = document.querySelector("#container5")
 const rockButton = document.querySelector("#rock-button");
 const paperButton = document.querySelector("#paper-button");
 const scissorsButton = document.querySelector("#scissors-button");
@@ -42,9 +43,13 @@ const computerChoiceContainer = document.querySelector("#computer-choice-contain
 const computerChoiceTextContainer = document.querySelector("#computer-choice-text-container");
 const computerChoiceImageContainer = document.querySelector("#computer-choice-image-container");
 const runningScoreContainer = document.querySelector("#running-score-container");
-const runningScoreText = document.createElement("p");
+const playerScoreContainer = document.querySelector("#player-score-container");
+const computerScoreContainer = document.querySelector("#computer-score-container");
+const runningScorePlayerText = document.createElement("p");
+const runningScoreComputerText = document.createElement("p");
 const endgameContainer = document.querySelector("#endgame-container");
 const endgameText = document.createElement("p");
+const buttonContainer = document.querySelector("#button-container");
 
 
 
@@ -111,26 +116,31 @@ function singleRound(playerSelection, computerSelection)  {
         }
     }
 
-    runningScoreText.textContent = "Player: " + playerWinCounter + "   **********   Computer: " + computerWinCounter;
-    runningScoreContainer.appendChild(runningScoreText);
+    //runningScoreText.textContent = "Player: " + playerWinCounter + "   **********   Computer: " + computerWinCounter;
+    runningScorePlayerText.textContent = playerWinCounter
+    playerScoreContainer.appendChild(runningScorePlayerText);
+    runningScoreComputerText.textContent = computerWinCounter
+    computerScoreContainer.appendChild(runningScoreComputerText);
+
 
     if (playerWinCounter === 3) {
         endgameText.textContent = "Player wins 3 - " + computerWinCounter + ".";
         endgameContainer.appendChild(endgameText);
         resetButton.textContent = "Play again?";
         resetContainer.appendChild(resetButton);
-        container2.removeChild(rockButton);
-        container2.removeChild(paperButton);
-        container2.removeChild(scissorsButton);
+        buttonContainer.removeChild(rockButton);
+        buttonContainer.removeChild(paperButton);
+        buttonContainer.removeChild(scissorsButton);
+        
     }
     if (computerWinCounter === 3) {
         endgameText.textContent = "Computer wins 3 - " + playerWinCounter + ".";
         endgameContainer.appendChild(endgameText);
         resetButton.textContent = "Play again?";
         resetContainer.appendChild(resetButton);
-        container2.removeChild(rockButton);
-        container2.removeChild(paperButton);
-        container2.removeChild(scissorsButton);
+        buttonContainer.removeChild(rockButton);
+        buttonContainer.removeChild(paperButton);
+        buttonContainer.removeChild(scissorsButton);
     }
 }  
 
@@ -276,13 +286,19 @@ scissorsButton.addEventListener('click', () => {
 resetButton.addEventListener('click', () => {
     playerWinCounter = 0;
     computerWinCounter = 0;
-    container2.appendChild(rockButton);
-    container2.appendChild(paperButton);
-    container2.appendChild(scissorsButton);
+    runningScorePlayerText.textContent = playerWinCounter
+    playerScoreContainer.appendChild(runningScorePlayerText);
+    runningScoreComputerText.textContent = computerWinCounter
+    computerScoreContainer.appendChild(runningScoreComputerText);
+   
+    
+    buttonContainer.appendChild(rockButton);
+    buttonContainer.appendChild(paperButton);
+    buttonContainer.appendChild(scissorsButton);
+
     resetContainer.removeChild(resetButton);
     resultsContainer.removeChild(resultsText);
     endgameContainer.removeChild(endgameText);
-    runningScoreContainer.removeChild(runningScoreText);
     // Remove images from playerChoiceImageContainer
     if (playerChoiceImageContainer.childNodes.length === 0) {
         // Container is empty
@@ -301,3 +317,9 @@ resetButton.addEventListener('click', () => {
         computerChoiceImageContainer.replaceChild(transparentImage, computerChoiceImageContainer.childNodes[0]);
     }
 });
+
+// "main" Loads on page startup
+runningScorePlayerText.textContent = playerWinCounter
+playerScoreContainer.appendChild(runningScorePlayerText);
+runningScoreComputerText.textContent = computerWinCounter
+computerScoreContainer.appendChild(runningScoreComputerText);
